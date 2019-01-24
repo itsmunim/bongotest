@@ -1,5 +1,17 @@
+from itertools import groupby
+from operator import itemgetter
+
+
 def print_depth(data):
-    pass
+    depths = sorted(get_depths(data), key=lambda tup: tup[1])
+    keys_grouped_by_depth = [(key, list(list(zip(*group))[0])) for key, group in groupby(depths, itemgetter(1))]
+    print_keys_grouped_by_depth(keys_grouped_by_depth)
+
+
+def print_keys_grouped_by_depth(keys_grouped_by_depth):
+    for depth, keys in keys_grouped_by_depth:
+        for key in sorted(keys):
+            print '{}: {}'.format(key, depth)
 
 
 def get_depths(data, curr_depth=0):
