@@ -1,4 +1,4 @@
-from bongotest.datastructure import Node, create_bst, get_node
+from bongotest.datastructure import create_bst, get_node
 from bongotest.lca import lca
 
 bst = create_bst()
