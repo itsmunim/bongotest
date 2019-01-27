@@ -6,6 +6,8 @@ def lca(node_a, node_b):
         node_b (Node): Second node
     Returns:
         Node: Least common ancestor of node_a and node_b
+    Remarks:
+        Runtime of the algorithm is O(n); whereas Space complexity is O(1)
     """
 
     depth_a = depth(node_a)
