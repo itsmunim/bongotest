@@ -40,3 +40,17 @@ bst = create_bst()
 print lca(bst[2], bst[4]).value
 
 ```
+
+#### Complexity of the LCA Algorithm
+
+##### Runtime:
+
+If we consider the height of the tree is `h`, then the time complexity is `O(h)`. Considering number
+of node to be `n`, this is more optimal than `O(n)`. This was possible because of the data structure as
+in every node has pointer to it's parent.
+
+##### Space:
+
+The space complexity is constant `O(1)`; the reason being we don't store any path or info while running the
+algorithm. The algorithm works based on calculating depth of two nodes and based on that deciding if
+it should go back upto the node where both has a convergence and hence the LCA is obtained.
