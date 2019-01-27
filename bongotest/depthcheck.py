@@ -15,6 +15,14 @@ def print_keys_grouped_by_depth(keys_grouped_by_depth):
 
 
 def get_depths(data, curr_depth=0):
+    """
+    Finds least common ancestor for given two nodes
+    Args:
+        data (dict): A dictionary object containing key value pairs
+        curr_depth (int): Initial depth for the current level of the data dict
+    Returns:
+        list: A list of tuple of form (key, depth) for each key in the given dict
+    """
     depths = []
     for k in data:
         depths.append((k, curr_depth + 1))
